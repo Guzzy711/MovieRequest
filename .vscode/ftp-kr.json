@@ -1,0 +1,16 @@
+{
+    "host": "linux108.unoeuro.com",
+    "username": "guzzy.dk",
+    "password": "tor123456",
+    "remotePath": "movierequest",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}

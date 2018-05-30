@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>MovieRequest</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container-fluid" id="wrapper">
+        <div class="row">
+            <nav class="sidebar col-xs-12 col-sm-4 col-lg-3 col-xl-2">
+                <h1 class="site-title">
+                    <a href="index.html">
+                        <i class="fas fa-film"></i>
+                        Movie Request</a>
+                </h1>
+asd
+                <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+
+                </a>
+                <ul class="nav nav-pills flex-column sidebar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">
+                            <i class="fab fa-grav"></i>
+                            Dashboard
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="oversigt.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            Oversigt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="addmovie.html">
+                            <i class="fas fa-plus-square"></i>
+                            Tilføj film
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-folder-open"></i>
+                            Nyligt hentede film</a>
+                    </li>
+                    <a href="#" class="logout-button">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Log ud</a>
+            </nav>
+            <main class="col-xs-12 col-sm-8 col-lg-9 col-xl-10 pt-3 pl-4 ml-auto">
+                <header class="page-header row justify-center">
+                    <div class="col-md-6 col-lg-8">
+                        <h1 class="float-left text-center text-md-left">Tilføj Film</h1>
+                        <span class="help-block">Mere info på film = Nemmere at finde</span>
+                    </div>
+                    <div class="dropdown user-dropdown col-md-6 col-lg-4 text-center text-md-right">
+                        <a class="btn btn-stripped dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/profile.jpg" alt="profile photo" class="circle float-left profile-photo" width="50" height="auto">
+                            <div class="username mt-1">
+                                <h4 class="mb-1">Guzzy711</h4>
+                                <h6 class="text-muted">Super Admin</h6>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" style="margin-right: 1.5rem;" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                Profil</a>
+                            <a class="dropdown-item" href="#">
+                                Indstillinger</a>
+                            <a class="dropdown-item" href="#">
+                                Logout</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </header>
+                <section class="row addMovieContainer">
+                    <div class="col-sm-12">
+                        <section class="row">
+                            <div class="col-12">
+                                <div class="card mb-4" ng-app="">
+                                    <div class="card-block">
+
+
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                                                <form class="form" action="#" onsubmit="return addMovie()">
+                                                    <div class="form-group row">
+                                                        <label class="col-md-3 col-form-label">Titel på film </label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="regular" class="form-control" id="movieTitle" ng-model="titleMovie">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-md-3 col-form-label">År</label>
+                                                        <div class="col-md-9">
+                                                            <input class="form-control" type="number" id="yearMovie" ng-model="yearMovie">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-md-3 col-form-label">Instruktør</label>
+                                                        <div class="col-md-9">
+                                                            <input class="form-control" type="text" id="director" ng-model="instruMovie">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group row">
+                                                        <label class="col-md-3 col-form-label">Link til trailer (YouTube) </label>
+                                                        <div class="col-md-9">
+                                                            <input type="url" name="regular" id="YouTubeURL" class="form-control" ng-model="trailerMovie">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </form>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                                                <div id="preview" style="margin:25px;" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+                                                    <div class="card" style="max-width:95%">
+
+                                                        <div class="card-body">
+                                                            <h4 class="card-title"> Film titel:
+                                                                <br>
+                                                                <span ng-bind="titleMovie"></span>
+                                                            </h4>
+                                                            <p class="card-text">År:
+                                                                <span ng-bind="yearMovie"></span>
+                                                            </p>
+                                                            <p class="card-text">Instruktør:
+                                                                <span ng-bind="instruMovie"></span>
+                                                            </p>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button class="btn btn-secondary float-right" style="margin:15px;margin-right:25px;" type="submit" id="submitMovie" data-toggle="tooltip" data-placement="bottom"
+                                                        title="Tilføj film ønske, der skal downloades..">
+                                                        <i class="fas fa-paper-plane"></i>
+                                                        Tilføj</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+            </main>
+            </div>
+        </div>
+
+
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="js/AddMovieScript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

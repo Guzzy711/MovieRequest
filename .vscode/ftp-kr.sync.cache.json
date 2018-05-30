@@ -1,0 +1,62 @@
+{
+  "ftp://linux108.unoeuro.com:21@guzzy.dk": {
+    "movierequest": {
+      "addmovie.html": {
+        "type": "-",
+        "size": 10224,
+        "lmtime": 1525588252894,
+        "modified": false
+      },
+      "css": {
+        "style.css": {
+          "type": "-",
+          "size": 19855,
+          "lmtime": 1525537237614,
+          "modified": false
+        }
+      },
+      "images": {},
+      "index.html": {
+        "type": "-",
+        "size": 4353,
+        "lmtime": 1525551599745,
+        "modified": false
+      },
+      "js": {
+        "AddMovieScript.js": {
+          "type": "-",
+          "size": 1668,
+          "lmtime": 1525551440535,
+          "modified": false
+        },
+        "script.js": {
+          "type": "-",
+          "size": 719,
+          "lmtime": 1525545236536,
+          "modified": true
+        }
+      },
+      "oversigt.html": {
+        "type": "-",
+        "size": 6160,
+        "lmtime": 1525552110991,
+        "modified": false
+      },
+      "php": {
+        "addmovie.php": {
+          "type": "-",
+          "size": 376,
+          "lmtime": 1525544411715,
+          "modified": false
+        },
+        "dbconnect.php": {
+          "type": "-",
+          "size": 490,
+          "lmtime": 1525543249106,
+          "modified": false
+        }
+      }
+    }
+  },
+  "$version": 1
+}
